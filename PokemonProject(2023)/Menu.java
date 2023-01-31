@@ -22,7 +22,7 @@ public class Menu {
                 }
                 int menuPick = sc.nextInt();
                 if(menuPick == 1){
-                    System.out.println("★☆★☆★☆★☆모험하기★☆★☆★☆★☆");
+                    System.out.println("★☆★☆★☆★☆★☆★☆모험하기★☆★☆★☆★☆★☆★☆");
                     System.out.println("디지털 요정 : 몇 번 여행을 떠날까요? ");
                     int trip = sc.nextInt();
                     for(int x =0 ; x<trip ; x++){
