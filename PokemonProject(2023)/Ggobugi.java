@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ggobugi extends Pokemon{
@@ -24,8 +23,8 @@ public class Ggobugi extends Pokemon{
     }
 }
 
-class anibugi extends Ggobugi {
-    public anibugi(String name, int power, int speed) {
+class Anibugi extends Ggobugi {
+    public Anibugi(String name, int power, int speed) {
         super(name, power, speed);
         skills.add("물기");
         skills.add("물대포");
@@ -33,8 +32,8 @@ class anibugi extends Ggobugi {
 
 }
 
-class gabuckking extends anibugi{
-    public gabuckking(String name, int power, int speed) {
+class GgobuckKing extends Anibugi {
+    public GgobuckKing(String name, int power, int speed) {
         super(name, power, speed);
         skills.add("하이드로펌프");
         skills.add("로케트박치기");

@@ -40,13 +40,30 @@ class MyPokemon{
     public static void setMyPoSpeed(int myPoSpeed) {
         MyPoSpeed = myPoSpeed;
     }
-
     static List<Pokemon> pokemonList = new ArrayList<>();
+    static List<Pokemon> pokemonList_level2 = new ArrayList<>();
+    static List<Pokemon> pokemonList_level3 = new ArrayList<>();
 
-    public void startPokemon(){
+    public static void Pokemon_settings(){
         pokemonList.add(new Pairi("파이리",80,95));
         pokemonList.add(new Ggobugi("꼬부기",70,75));
         pokemonList.add(new IsanghaeSeed("이상해씨",85,85));
+
+        pokemonList_level2.add(new Lizard("리자드",95,115));
+        pokemonList_level2.add(new Anibugi("어니부기",100,80));
+        pokemonList_level2.add(new IsanghaeGrass("이상해풀",100,85));
+
+        pokemonList_level3.add(new Lizamong("리자몽",115,130));
+        pokemonList_level3.add(new GgobuckKing("거북왕",120,100));
+        pokemonList_level3.add(new IsanghaeFlower("이상해꽃",125,90));
+
+    }
+
+
+
+
+    public void startPokemon(){
+        Pokemon_settings();
         System.out.println("오박사 :  자네와 함께할 친구는 " + pokemonList.get(StartSettings.getChoice()).getName() + "이다!");
         System.out.println("오박사 :  자! 즐거운 여행을 하고오거라!");
         setMyPoName(pokemonList.get(StartSettings.getChoice()).getName());
@@ -67,15 +84,64 @@ class MyPokemon{
     public static void attack() {
         System.out.println("============================================");
         System.out.println("어떤 공격을 할 것인가?!");
-        int i = 1;
-        for (String skill : MyPokemon.pokemonList.get(StartSettings.getChoice()).skills) {
-            System.out.println(i + " : " + skill);
-            i++;
+        //static List<Pokemon> pokemonList = new ArrayList<>();
+        if (MyPokemon.getExp()<30){
+            int i = 1;
+            for (String skill : MyPokemon.pokemonList.get(StartSettings.getChoice()).skills) {
+                System.out.println(i + " : " + skill);
+                i++;
+            }
+            Scanner scanner = new Scanner(System.in);
+            int skillMenu = scanner.nextInt()-1;
+            System.out.println("============================================");
+
+            System.out.println(
+                    MyPokemon.getMyPoName() +
+                            " 이/가 "+ MyPokemon.pokemonList.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            "을(를) 시전했다!");
+        } else if (MyPokemon.getExp()<60&&MyPokemon.getExp()>=30) {
+            int v = 1;
+            for (String skill : MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).skills) {
+                System.out.println(v + " : " + skill);
+                v++;
+            }
+            Scanner scanner = new Scanner(System.in);
+            int skillMenu = scanner.nextInt()-1;
+            System.out.println("============================================");
+
+            System.out.println(
+                    MyPokemon.getMyPoName() +
+                            " 이/가 "+ MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            "을(를) 시전했다!");
+        } else if (MyPokemon.getExp()>=60) {
+            int o = 1;
+            for (String skill : MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).skills) {
+                System.out.println(o + " : " + skill);
+                o++;
+            }
+            Scanner scanner = new Scanner(System.in);
+            int skillMenu = scanner.nextInt()-1;
+            System.out.println("============================================");
+
+            System.out.println(
+                    MyPokemon.getMyPoName() +
+                            " 이/가 "+ MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            "을(를) 시전했다!");
         }
-        Scanner scanner = new Scanner(System.in);
-        int skillMenu = scanner.nextInt();
-        System.out.println("============================================");
-        System.out.println(MyPokemon.pokemonList.get(StartSettings.getChoice()).getName() + "가 "+ MyPokemon.pokemonList.get(StartSettings.getChoice()).skills.get(skillMenu - 1) + "을(를) 시전했다!");
+
+
+        //listlevel2 =
+        //listlevel3 =
+//        Scanner scanner = new Scanner(System.in);
+//        int skillMenu = scanner.nextInt()-1;
+//        System.out.println("============================================");
+//
+//        System.out.println(
+//                MyPokemon.getMyPoName() +
+//                        "가 "+ MyPokemon.pokemonList.get(StartSettings.getChoice()).skills.get(skillMenu) +
+//                        "을(를) 시전했다!");
+
+        //System.out.println(MyPokemon.pokemonList.get(StartSettings.getChoice()).getName() + "가 "+ MyPokemon.pokemonList.get(StartSettings.getChoice()).skills.get(skillMenu - 1) + "을(를) 시전했다!");
     }
 }
 public class StartSettings {
@@ -122,7 +188,5 @@ public class StartSettings {
         int choice = sc.nextInt();
         setChoice(choice);
     }
-
-
 
 }
