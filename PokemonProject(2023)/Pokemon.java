@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.List;
 
 public abstract class Pokemon {
     private String name;

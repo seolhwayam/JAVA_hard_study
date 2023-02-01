@@ -29,7 +29,7 @@ public class Adventure {
     }
     public void fight(){
         int RanSkill = (int)(Math.random() * 6 ) + 0;
-        int wildPower = (int)(Math.random() * 30 ) + 70;
+        int wildPower = (int)(Math.random() * 30 ) + 50;
         MyPokemon.attack();
         System.out.println(wildPokemon[RanNum] + "이(가) " + wildPokemonSkill[RanSkill] + "을/를 시전했다!!");
         System.out.println("============================================");
