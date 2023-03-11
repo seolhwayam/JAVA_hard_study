@@ -7,8 +7,8 @@ public class Menu {
         Adventure a1 = new Adventure();
         List<String> showMenu = new ArrayList<>();
         showMenu.add("★ 모험하기 ☆");
-        showMenu.add("★ 포켓몬 병원 ☆");
-        showMenu.add("★ 체육관 배찌 격파 ☆");
+        showMenu.add("★ 체육관 도전 ☆");
+        showMenu.add("★ 체육관 배찌 확인 ☆");
         showMenu.add("★ 종료하기(단, 세이브 안됨) ☆");
 
         while (true) {
@@ -37,7 +37,7 @@ public class Menu {
 
 
                 } else if(menuPick == 3){
-                    System.out.println("★☆★☆★☆★☆★☆포켓몬 배찌 격파★☆★☆★☆★☆★☆");
+                    System.out.println("★☆★☆★☆★☆★☆체육관 격파(배찌)★☆★☆★☆★☆★☆");
                 }
 
                 else if (menuPick == 4) {
