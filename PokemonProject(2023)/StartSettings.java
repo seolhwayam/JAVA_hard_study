@@ -59,9 +59,6 @@ class MyPokemon{
 
     }
 
-
-
-
     public void startPokemon(){
         Pokemon_settings();
         System.out.println("오박사 :  자네와 함께할 친구는 " + pokemonList.get(StartSettings.getChoice()).getName() + "이다!");
@@ -71,14 +68,6 @@ class MyPokemon{
         setMyPoSpeed(pokemonList.get(StartSettings.getChoice()).getSpeed());
         System.out.println("그렇게 " + StartSettings.getOwner() +"는(은) "+ getMyPoName() +"와 함께 여행을 떠나게 되는데...!!!");
         System.out.println("☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★");
-    }
-
-    public List<Pokemon> getPokemonList() {
-        return pokemonList;
-    }
-    @Override
-    public String toString() {
-        return MyPoName;
     }
 
     public static void attack() {

@@ -7,5 +7,8 @@ public class PokemonGame {
         s1.PokemonChoice();
         m1.startPokemon();
         Menu.menu();
+        Pokemon_GYM.info();
+
+
     }
 }
