@@ -133,19 +133,18 @@ public class StartSettings {
         this.owner = owner;
     }
 
-
     @Override
     public String toString() {
         return owner;
     }
 
-    public void Opacksa(){
+    public void ownerName_Script(){
         System.out.println("오박사:  왔는가? 자네!! 아차차 자네 이름이 뭐라고 했지?");
         String owner = sc.nextLine();
         setOwner(owner);
         System.out.println("오박사 :  아차차! " + getOwner() + "(이)라고 했지!?!!?");
     }
-    public void PokemonChoice(){
+    public void PokemonChoice_Script(){
         System.out.println("오박사 :  허허허! 참! 시간이 벌써 이렇게! 자자, 초보 트레이너라고 걱정말게나~");
         System.out.println("오박사 :  여기 자네와 같은 초보 트레이너들을 위한 포켓몬들을 준비했다네!");
         System.out.println("오박사 :  누구와 함께 여행을 떠나고 싶은가!?!?");
@@ -154,7 +153,7 @@ public class StartSettings {
         int choice = sc.nextInt();
         setChoice(choice);
     }
-    public void startPokemon(){
+    public void closing_doctorO_Script(){
         MyPokemon.Pokemon_settings();
         System.out.println("오박사 :  자네와 함께할 친구는 " + MyPokemon.pokemonList.get(StartSettings.getChoice()).getName() + "이다!");
         System.out.println("오박사 :  자! 즐거운 여행을 하고오거라!");
