@@ -67,7 +67,7 @@ class MyPokemon{
         System.out.println("어떤 공격을 할 것인가?!");
         if (MyPokemon.getExp()<30){
             int i = 1;
-            for (String skill : MyPokemon.pokemonList.get(StartSettings.getChoice()).skills) {
+            for (String skill : MyPokemon.pokemonList.get(Script.getChoice()).skills) {
                 System.out.println(i + " : " + skill);
                 i++;
             }
@@ -77,11 +77,11 @@ class MyPokemon{
 
             System.out.println(
                     MyPokemon.getMyPoName() +
-                            " 이/가 "+ MyPokemon.pokemonList.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            " 이/가 "+ MyPokemon.pokemonList.get(Script.getChoice()).skills.get(skillMenu) +
                             "을(를) 시전했다!");
         } else if (MyPokemon.getExp()<60&&MyPokemon.getExp()>=30) {
             int v = 1;
-            for (String skill : MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).skills) {
+            for (String skill : MyPokemon.pokemonList_level2.get(Script.getChoice()).skills) {
                 System.out.println(v + " : " + skill);
                 v++;
             }
@@ -91,11 +91,11 @@ class MyPokemon{
 
             System.out.println(
                     MyPokemon.getMyPoName() +
-                            " 이/가 "+ MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            " 이/가 "+ MyPokemon.pokemonList_level2.get(Script.getChoice()).skills.get(skillMenu) +
                             "을(를) 시전했다!");
         } else if (MyPokemon.getExp()>=60) {
             int o = 1;
-            for (String skill : MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).skills) {
+            for (String skill : MyPokemon.pokemonList_level3.get(Script.getChoice()).skills) {
                 System.out.println(o + " : " + skill);
                 o++;
             }
@@ -105,12 +105,21 @@ class MyPokemon{
 
             System.out.println(
                     MyPokemon.getMyPoName() +
-                            " 이/가 "+ MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).skills.get(skillMenu) +
+                            " 이/가 "+ MyPokemon.pokemonList_level3.get(Script.getChoice()).skills.get(skillMenu) +
                             "을(를) 시전했다!");
         }
     }
 }
-public class StartSettings {
+
+
+
+
+
+
+
+
+
+public class Script {
     Scanner sc = new Scanner(System.in);
 
     private static String owner;
@@ -155,12 +164,12 @@ public class StartSettings {
     }
     public void closing_doctorO_Script(){
         MyPokemon.Pokemon_settings();
-        System.out.println("오박사 :  자네와 함께할 친구는 " + MyPokemon.pokemonList.get(StartSettings.getChoice()).getName() + "이다!");
+        System.out.println("오박사 :  자네와 함께할 친구는 " + MyPokemon.pokemonList.get(Script.getChoice()).getName() + "이다!");
         System.out.println("오박사 :  자! 즐거운 여행을 하고오거라!");
-        MyPokemon.setMyPoName(MyPokemon.pokemonList.get(StartSettings.getChoice()).getName());
-        MyPokemon.setMyPoPower(MyPokemon.pokemonList.get(StartSettings.getChoice()).getPower());
-        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList.get(StartSettings.getChoice()).getSpeed());
-        System.out.println("그렇게 " + StartSettings.getOwner() +"는(은) "+ MyPokemon.getMyPoName() +"와 함께 여행을 떠나게 되는데...!!!");
+        MyPokemon.setMyPoName(MyPokemon.pokemonList.get(Script.getChoice()).getName());
+        MyPokemon.setMyPoPower(MyPokemon.pokemonList.get(Script.getChoice()).getPower());
+        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList.get(Script.getChoice()).getSpeed());
+        System.out.println("그렇게 " + Script.getOwner() +"는(은) "+ MyPokemon.getMyPoName() +"와 함께 여행을 떠나게 되는데...!!!");
         System.out.println("☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★");
     }
 

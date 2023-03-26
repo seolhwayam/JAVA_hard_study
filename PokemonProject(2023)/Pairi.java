@@ -5,7 +5,7 @@ public class Pairi extends Pokemon{
     public Pairi(String name, int power, int speed) {
         super(name, power, speed);
         skills = new ArrayList<>();
-        skills.add("불꽃 세계");
+        skills.add("불꽃 세계!");
         skills.add("할퀴기");
     }
 

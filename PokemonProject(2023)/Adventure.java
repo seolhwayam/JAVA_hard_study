@@ -14,7 +14,7 @@ public class Adventure {
         int oneRanNum = (int)(Math.random() * 7) + 0;
         setRanNum(oneRanNum);
         System.out.println("야생 포켓몬 " + wildPokemon[RanNum]+"이/가 나타났다!!");
-        System.out.println(StartSettings.getOwner() +" : 앗! 어떡하지?!" );
+        System.out.println(Script.getOwner() +" : 앗! 어떡하지?!" );
         System.out.println("============================================");
         System.out.println("     [  1  싸운다.   ::   2  도망친다.  :: 3 포켓몬 도감   ]");
         int fightChoice = sc.nextInt();
@@ -60,12 +60,12 @@ public class Adventure {
 
     public void Evolution_level2(){
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
-        System.out.println(MyPokemon.getMyPoName()+" : 어?!?!? 어어!?!!! "+StartSettings.getOwner()+"! 내 몸이 이상해!!");
+        System.out.println(MyPokemon.getMyPoName()+" : 어?!?!? 어어!?!!! "+ Script.getOwner()+"! 내 몸이 이상해!!");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
-        MyPokemon.setMyPoName(MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).getName());
-        MyPokemon.setMyPoPower(MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).getPower());
-        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList_level2.get(StartSettings.getChoice()).getSpeed());
+        MyPokemon.setMyPoName(MyPokemon.pokemonList_level2.get(Script.getChoice()).getName());
+        MyPokemon.setMyPoPower(MyPokemon.pokemonList_level2.get(Script.getChoice()).getPower());
+        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList_level2.get(Script.getChoice()).getSpeed());
         System.out.println("★"+MyPokemon.getMyPoName()+"★"+"로 진화하였다!!!");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
     }
@@ -73,12 +73,12 @@ public class Adventure {
     public void Evolution_level3(){
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
         System.out.println("어?!?!? 어어!?!!!");
-        System.out.println(MyPokemon.getMyPoName()+" : "+StartSettings.getOwner()+"! 내 몸이 이상해!!!!!");
+        System.out.println(MyPokemon.getMyPoName()+" : "+ Script.getOwner()+"! 내 몸이 이상해!!!!!");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
-        MyPokemon.setMyPoName(MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).getName());
-        MyPokemon.setMyPoPower(MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).getPower());
-        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList_level3.get(StartSettings.getChoice()).getSpeed());
+        MyPokemon.setMyPoName(MyPokemon.pokemonList_level3.get(Script.getChoice()).getName());
+        MyPokemon.setMyPoPower(MyPokemon.pokemonList_level3.get(Script.getChoice()).getPower());
+        MyPokemon.setMyPoSpeed(MyPokemon.pokemonList_level3.get(Script.getChoice()).getSpeed());
         System.out.println("★"+MyPokemon.getMyPoName()+"★"+"로 진화하였다!!!");
         System.out.println("★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆");
 
