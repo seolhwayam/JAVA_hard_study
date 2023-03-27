@@ -151,7 +151,7 @@ public class Script {
         System.out.println("오박사:  왔는가? 자네!! 아차차 자네 이름이 뭐라고 했지?");
         String owner = sc.nextLine();
         setOwner(owner);
-        System.out.println("오박사 :  아차차! " + getOwner() + "(이)라고 했지!?!!?");
+        System.out.println("오박사 :  아차차!! " + getOwner() + "(이)라고 했지!?!!?");
     }
     public void PokemonChoice_Script(){
         System.out.println("오박사 :  허허허! 참! 시간이 벌써 이렇게! 자자, 초보 트레이너라고 걱정말게나~");
