@@ -16,7 +16,7 @@ public class Adventure {
         System.out.println("야생 포켓몬 " + wildPokemon[RanNum]+"이/가 나타났다!!");
         System.out.println(Script.getOwner() +" : 앗! 어떡하지?!" );
         System.out.println("============================================");
-        System.out.println("     [  1  싸운다.   ::   2  도망친다.  :: 3 포켓몬 도감   ]");
+        System.out.println("     [  1  싸운다.   ::   2  도망친다.  :: 3 포켓몬 도감]");
         int fightChoice = sc.nextInt();
 
         if (fightChoice == 1){
